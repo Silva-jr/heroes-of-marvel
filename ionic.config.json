@@ -1,7 +1,8 @@
 {
   "name": "heroes-of-marvel",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }

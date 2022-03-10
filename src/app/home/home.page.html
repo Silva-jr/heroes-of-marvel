@@ -1,20 +1,110 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="app-content">
+  <div class="container">
+    <header class="header">
+      <div>
+        <img src="./assets/img/menu.svg" alt="menu do app">
+      </div>
+      <div><img src="./assets/img/logo.svg" alt="logo Marvel"></div>
+      <div><img src="./assets/img/search.svg" alt="Pesquisar"></div>
+    </header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <main class="main-content">
+      <div class="main-title">
+        <h4>Bem vindo ao Marvel Heroes</h4>
+        <h1>Escolha o seu personagem</h1>
+      </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      <div class="main-heroes-menu">
+        <img src="./assets/img/hero2.png" alt="Herois da marvel">
+        <img src="./assets/img/vilain.png" alt="viloes da marvel">
+        <img src="./assets/img/antihero.png" alt="Anti herois da marvel">
+        <img src="./assets/img/alien.png" alt="Aliens da marvel">
+        <img src="./assets/img/human.png" alt="Human da marvel">
+      </div>
+
+      <div class="main-card">
+        <div class="card-title">
+          <h4>Heróis</h4>
+          <p>Ver tudo</p>
+        </div>
+        <div class="card-image">
+          <div class="hero-card" *ngFor="let item of dataHeroes"   [routerLink]="['../details', item.id]">
+            <img src={{item.imagePath}} alt="herois da marvel">
+            <div class="hero-text">
+              <h4> {{item.name}} </h4>
+              <h1> {{item.alterEgo}} </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-card">
+        <div class="card-title">
+          <h4>Vilões</h4>
+          <p>Ver tudo</p>
+        </div>
+        <div class="card-image">
+          <div class="hero-card" *ngFor="let items of dataVillains" [routerLink]="['../details', items.id]">
+            <img src={{items.imagePath}} alt="Vilões da marvel">
+            <div class="hero-text">
+              <h4> {{items.name}} </h4>
+              <h1> {{items.alterEgo}} </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-card">
+        <div class="card-title">
+          <h4>Anti-heróis</h4>
+          <p>Ver tudo</p>
+        </div>
+        <div class="card-image">
+          <div class="hero-card" *ngFor="let item of dataAntiHeroes" [routerLink]="['../details', item.id]">
+            <img src={{item.imagePath}} alt="Anti-heróis da marvel">
+            <div class="hero-text">
+              <h4>{{item.name}}</h4>
+              <h1>{{item.alterEgo}}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-card">
+        <div class="card-title">
+          <h4>Alienígenas</h4>
+          <p>Ver tudo</p>
+        </div>
+        <div class="card-image">
+          <div class="hero-card" *ngFor="let item of dataAliens" [routerLink]="['../details', item.id]">
+            <img src={{item.imagePath}} alt="Aliens da marvel">
+            <div class="hero-text">
+              <h4>{{item.name}}</h4>
+              <h1> {{item.alterEgo}} </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-card">
+        <div class="card-title">
+          <h4>Humanos</h4>
+          <p>Ver tudo</p>
+        </div>
+        <div class="card-image">
+          <div class="hero-card" *ngFor="let item of dataHumans" [routerLink]="['../details', item.id]">
+            <img src={{item.imagePath}} alt="Agentes humanos da marvel">
+            <div class="hero-text">
+              <h4> {{item.name}} </h4>
+              <h1>{{item.alterEgo}}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </main>
   </div>
-</ion-content>
+
+</div>

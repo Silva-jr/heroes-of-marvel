@@ -1,0 +1,149 @@
+.app-content {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  overflow: auto;
+  color: #fff;
+  position: relative;
+  .img-background {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  .background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 31.29%,
+      #000000 74.92%
+    );
+    .container {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      height: 100vh;
+      color: #000;
+      padding: 3rem .5rem;
+      scroll-behavior: smooth;
+      color: #fff;
+      .header {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        color: #fff;
+      }
+      .main {
+        width: 100%;
+        height: 100%;
+        padding-top: 8rem;
+
+        .title {
+          width: 60%;
+          h4 {
+            font-weight: 400;
+            font-size: .8rem;
+          }
+          h2 {
+            font-weight: 800;
+            margin-top: -.5rem;
+          }
+        }
+        .details {
+          width: 100%;
+          display: grid;
+          padding-top: 2rem;
+          grid-template-columns: auto auto auto auto;
+          gap: 1rem;          
+          &-component {
+              text-align: center;
+              p{
+                  font-size: .8rem;
+              }
+          }
+        }
+        .description{
+            width: 100%;
+            height: auto;
+            p{
+                text-align: justify;
+                font-size: .9rem;
+            }
+        }
+        .habilidades{
+            width: 100%;
+            .bar-habilites{
+                width: 100%;
+                display: flex;
+                gap: 2rem;
+                align-items: center;    
+                p{
+                    font-size: .8rem;
+                    width: 40%;
+                }            
+                img{
+                    width: 70%;
+                }
+            }
+        }
+          .main-card {
+        width: 100%;
+        height: auto;
+        padding-bottom: 3rem;
+
+        .card-title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          h4 {
+            color: #f2264b;
+            font-size: 1rem;
+            font-weight: 700;
+          }
+          p {
+            color: #b7b7c8;
+            font-size: 0.9rem;
+          }
+        }
+
+        .card-image {
+          position: relative;
+          width: 100%;
+          height: auto;
+          display: flex;
+          align-items: center;
+          overflow-x: auto;
+          gap: 1rem;
+
+          .hero-card {
+            width: 40%;
+            flex: auto 0 0;
+            height: auto;
+            position: relative;
+            z-index: 2;
+            text-transform: capitalize;
+            padding: 0rem;
+
+            img {
+              border-radius: .5rem;
+              height: auto;
+              //box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.25);
+            }
+          }
+        }
+
+        .card-image::-webkit-scrollbar {
+          display: none;
+        }
+      }
+      }
+    }
+  }
+}
+
+.app-content::-webkit-scrollbar {
+  display: none;
+}

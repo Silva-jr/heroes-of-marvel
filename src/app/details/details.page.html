@@ -1,0 +1,68 @@
+<div class="app-content">
+    <img class="img-background" src={{dataDetails?.imagePath}} alt="">
+    <div class="background">
+        <div class="container">
+            <header class="header">
+                <div>
+                    <img src="./assets/img/back.svg" [routerLink]="['/']" alt="menu do app">
+                </div>
+            </header>
+
+            <main class="main">
+                <div class="title">
+                    <h3> {{dataDetails?.name}} </h3>
+                    <h2>{{dataDetails?.alterEgo}}</h2>
+                </div>
+
+                <div class="details">
+                    <div class="details-component">
+                        <img src="./assets/img/vela.png" alt="">
+                        <p>{{dataDetails?.caracteristics?.birth}}</p>
+                    </div>
+                    <div class="details-component">
+                        <img src="./assets/img/peso.png" alt="">
+                        <p>{{dataDetails?.caracteristics?.weight?.value}}kg</p>
+                    </div>
+                    <div class="details-component">
+                        <img src="./assets/img/regua.png" alt="">
+                        <p>{{dataDetails?.caracteristics?.height?.value}}m</p>
+                    </div>
+                    <div class="details-component">
+                        <img src="./assets/img/planeta.png" alt="">
+                        <p>{{dataDetails?.caracteristics?.universe}}</p>
+                    </div>
+                </div>
+                <div class="description">
+                    <p>{{dataDetails?.biography}}</p>
+                </div>
+                <div class="habilidades">
+                    <h2>habilidades</h2>
+                    <div class="bar-habilites">
+                        <p>Força</p> <img src="./assets/img/intelligence.png" alt="">
+                    </div>
+                    <div class="bar-habilites">
+                        <p>Agilidade</p> <img src="./assets/img/intelligence.png" alt="">
+                    </div>
+                    <div class="bar-habilites">
+                        <p>Resistência</p> <img src="./assets/img/intelligence.png" alt="">
+                    </div>
+                    <div class="bar-habilites">
+                        <p>Velocidade</p> <img src="./assets/img/intelligence.png" alt="">
+                    </div>
+
+                </div>
+                <div class="main-card">
+                    <div class="card-title">
+                        <h2>Filmes</h2>
+                    </div>
+                    <div class="card-image">
+                        <div class="hero-card" *ngFor="let item of dataDetails?.movies">
+                            <img src={{item}} alt="">
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</div>
