@@ -1,13 +1,12 @@
 <div class="app-content">
+  <header class="header">
+    <div>
+      <img src="./assets/img/menu.svg" alt="menu do app">
+    </div>
+    <div><img src="./assets/img/logo.svg" alt="logo Marvel"></div>
+    <div><img src="./assets/img/search.svg" alt="Pesquisar"></div>
+  </header>
   <div class="container">
-    <header class="header">
-      <div>
-        <img src="./assets/img/menu.svg" alt="menu do app">
-      </div>
-      <div><img src="./assets/img/logo.svg" alt="logo Marvel"></div>
-      <div><img src="./assets/img/search.svg" alt="Pesquisar"></div>
-    </header>
-
     <main class="main-content">
       <div class="main-title">
         <h4>Bem vindo ao Marvel Heroes</h4>
@@ -28,7 +27,7 @@
           <p>Ver tudo</p>
         </div>
         <div class="card-image">
-          <div class="hero-card" *ngFor="let item of dataHeroes"   [routerLink]="['../details', item.id]">
+          <div class="hero-card" *ngFor="let item of dataHeroes" [routerLink]="['../details', item.id]">
             <img src={{item.imagePath}} alt="herois da marvel">
             <div class="hero-text">
               <h4> {{item.name}} </h4>
