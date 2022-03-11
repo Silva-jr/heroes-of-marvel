@@ -26,14 +26,15 @@ O desafio foi criar um aplicativo listando os personagens da Marvel, com suas in
 
 <img src="https://trello-attachments.s3.amazonaws.com/590fa896d2d25e50583de620/299x577/cff82f8326776d7757234d3383f5021f/marvel.gif" width="250" height="450">
 
-# Techs: 
-Angular
+# Feito em: 
+Ionic
 
-# Funcionalidades:
-- Seu app deverá conter uma tela inicial onde irá listar os personagens divididos por heróis, vilões, anti-heróis, alieníginas e humanos<br>
-- O usuário poderá visualizar mais personagens arrastando o dedo para o lado (como um carrossel)<br>
-- Ao clicar em um personagem, deverão ser exibidas informações sobre a vida, habilidades e filmes na qual esse personagem esteve<br>
-- Seu app deverá se parecer o mais próximo possível ao modelo que está disponível na pasta "design"<br>
+# Para rodar:
+- Fazer o clone do repositório<br>
+- $ npm install -g @ionic/cli<br>
+- $ npm install / yarn install<br>
+- $ npm run api / yarn run api<br>
+- $ ionic serve<br>
 
 
 ## Dados
